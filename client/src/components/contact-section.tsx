@@ -54,28 +54,28 @@ export function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "alex@example.com",
-      href: "mailto:alex@example.com"
+      value: "shivanshchaurasiya@gmail.com",
+      href: "mailto:shivanshchaurasiya@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91-7007317605",
+      href: "tel:+917007317605"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Delhi, India",
       href: "#"
     }
   ];
 
   const socialLinks = [
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/mrshivanshchaurasiya", icon: "in" },
+    { name: "Behance", href: "https://www.behance.net/chaurasiyashivansh", icon: "Be" },
     { name: "Twitter", href: "#", icon: "𝕏" },
-    { name: "LinkedIn", href: "#", icon: "in" },
-    { name: "Dribbble", href: "#", icon: "🏀" },
-    { name: "Behance", href: "#", icon: "Be" }
+    { name: "Dribbble", href: "#", icon: "🏀" }
   ];
 
   return (

@@ -13,7 +13,7 @@ export function HeroSection() {
     // In a real app, this would download an actual resume file
     const link = document.createElement('a');
     link.href = '#';
-    link.download = 'Alex_Chen_Resume.pdf';
+    link.download = 'Shivansh_Chaurasiya_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -27,20 +27,20 @@ export function HeroSection() {
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden glass-morphism p-1 animate-float">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
-                alt="Alex Chen - UI/UX Designer"
+                alt="Shivansh Chaurasiya - UI/UX Designer"
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">Alex Chen</span>
+            <span className="gradient-text">Shivansh Chaurasiya</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-4">UI/UX Designer</p>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Creating beautiful, functional digital experiences that bridge the gap between user needs and business goals through thoughtful design and intuitive interfaces.
+            I'm a passionate UI/UX Designer focused on creating intuitive and meaningful digital experiences. With a strong foundation in interface design and a curiosity for user behavior, I craft solutions that are not just beautiful but also functional.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -73,7 +73,7 @@ export function HeroSection() {
               </svg>
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/mrshivanshchaurasiya"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
               target="_blank"
               rel="noopener noreferrer"
@@ -83,13 +83,13 @@ export function HeroSection() {
               </svg>
             </a>
             <a
-              href="#"
+              href="https://www.behance.net/chaurasiyashivansh"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
               target="_blank"
               rel="noopener noreferrer"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.347-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.758-1.378l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+                <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
               </svg>
             </a>
             <a

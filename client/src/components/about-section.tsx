@@ -24,10 +24,10 @@ export function AboutSection() {
           <div className="animate-slide-up">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              I'm a passionate UI/UX designer with over 5 years of experience creating digital experiences that users love. I believe great design is invisible – it just works.
+              I'm a passionate UI/UX Designer focused on creating intuitive and meaningful digital experiences. With a strong foundation in interface design and a curiosity for user behavior, I craft solutions that are not just beautiful but also functional.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              My approach combines user research, data-driven insights, and creative problem-solving to deliver solutions that not only look beautiful but also drive business results.
+              I've worked on smart wearable interfaces and mobile apps, blending usability with visual impact. Always eager to learn, collaborate, and push creative boundaries.
             </p>
             
             {/* Skills */}
