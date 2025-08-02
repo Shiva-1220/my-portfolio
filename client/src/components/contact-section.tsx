@@ -74,8 +74,8 @@ export function ContactSection() {
   const socialLinks = [
     { name: "LinkedIn", href: "https://www.linkedin.com/in/mrshivanshchaurasiya", icon: "in" },
     { name: "Behance", href: "https://www.behance.net/chaurasiyashivansh", icon: "Be" },
-    { name: "Twitter", href: "#", icon: "𝕏" },
-    { name: "Dribbble", href: "#", icon: "🏀" }
+    { name: "GitHub", href: "https://github.com/Shiva-1220", icon: "⚛️" },
+    { name: "Twitter", href: "#", icon: "𝕏" }
   ];
 
   return (
