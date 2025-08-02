@@ -33,22 +33,6 @@ const projects = [
     image: "https://pixabay.com/get/g7bbd924eef1fe1abb8b87f746b570d4ffc990b3d904bb7058a1173c37374ca367b7e92372ad845a08825516e378ab4e791e0f3d7de2079c211fef69025c42812_1280.jpg",
     category: "branding",
     tags: ["Brand Identity", "Logo Design"]
-  },
-  {
-    id: 5,
-    title: "Digital Banking App",
-    description: "Secure and intuitive mobile banking experience with modern interface",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    category: "mobile",
-    tags: ["FinTech", "Security UX"]
-  },
-  {
-    id: 6,
-    title: "Online Learning Platform",
-    description: "Educational platform with interactive courses and progress tracking",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    category: "web",
-    tags: ["EdTech", "Interaction Design"]
   }
 ];
 

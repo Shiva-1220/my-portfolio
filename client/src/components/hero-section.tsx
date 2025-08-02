@@ -12,7 +12,7 @@ export function HeroSection() {
   const downloadResume = () => {
     // In a real app, this would download an actual resume file
     const link = document.createElement('a');
-    link.href = '#';
+    link.href = '/attached_assets/RESUME_SHIVANSHCHAURASIYA_1754163574605.pdf';
     link.download = 'Shivansh_Chaurasiya_Resume.pdf';
     document.body.appendChild(link);
     link.click();
