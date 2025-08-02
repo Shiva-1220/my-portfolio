@@ -26,7 +26,7 @@ export function HeroSection() {
           <div className="mb-8 relative">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden glass-morphism p-1 animate-float">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300"
+                src="/attached_assets/PASSPORT PIC_1754163000849.jpeg"
                 alt="Shivansh Chaurasiya - UI/UX Designer"
                 className="w-full h-full object-cover rounded-full"
               />
