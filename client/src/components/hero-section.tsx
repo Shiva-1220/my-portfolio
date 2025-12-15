@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Download, ArrowDown } from "lucide-react";
 import profilePhoto from "@assets/PASSPORT PIC_1754163000849.jpeg";
+import { useEffect, useState } from "react";
+
 
 export function HeroSection() {
   const scrollToWork = () => {
@@ -9,6 +11,26 @@ export function HeroSection() {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  const [resumeUpdated, setResumeUpdated] = useState<string>("");
+
+useEffect(() => {
+  fetch("/my-portfolio/resume.pdf", { method: "HEAD" })
+    .then((res) => {
+      const lastModified = res.headers.get("last-modified");
+      if (lastModified) {
+        const formatted = new Date(lastModified).toLocaleDateString(
+          "en-US",
+          { month: "short", day: "numeric", year: "numeric" }
+        );
+        setResumeUpdated(formatted);
+      }
+    })
+    .catch(() => {
+      setResumeUpdated("");
+    });
+}, []);
+
 
   
 
@@ -62,6 +84,12 @@ export function HeroSection() {
            Resume
             </a>
           </Button>
+          {resumeUpdated && (
+  <span className="mt-2 text-xs text-muted-foreground">
+    Updated: {resumeUpdated}
+  </span>
+)}
+
 
 
         </div>
