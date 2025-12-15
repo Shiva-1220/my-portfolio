@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
@@ -30,16 +30,16 @@ const projects = [
     id: 4,
     title: "Tech Startup Branding",
     description: "Complete brand identity for innovative technology company",
-    image: "https://pixabay.com/get/g7bbd924eef1fe1abb8b87f746b570d4ffc990b3d904bb7058a1173c37374ca367b7e92372ad845a08825516e378ab4e791e0f3d7de2079c211fef69025c42812_1280.jpg",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     category: "branding",
     tags: ["Brand Identity", "Logo Design"]
   }
 ];
 
 const categories = [
-  { id: "all", label: "All Projects" },
-  { id: "web", label: "Web Design" },
-  { id: "mobile", label: "Mobile Apps" },
+  { id: "all", label: "All" },
+  { id: "web", label: "Web" },
+  { id: "mobile", label: "Mobile" },
   { id: "branding", label: "Branding" }
 ];
 
@@ -51,58 +51,63 @@ export function WorkSection() {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="work" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id="work" className="section-padding bg-muted/30">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Selected Work</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A collection of projects showcasing my approach to solving complex design challenges
+          <p className="text-sm font-medium text-primary tracking-wide uppercase mb-3">
+            Portfolio
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+            Selected Work
+          </h2>
+          <p className="text-muted-foreground max-w-lg mx-auto">
+            A curated collection of projects showcasing my approach to design
           </p>
         </div>
         
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex justify-center gap-2 mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveFilter(category.id)}
-              className={`px-6 py-2 rounded-full transition-all duration-200 ${
-                activeFilter === category.id
-                  ? "filter-btn active"
-                  : "glass-morphism hover:bg-white/20 dark:hover:bg-black/20"
+              className={`px-5 py-2 rounded-lg text-sm font-medium filter-btn ${
+                activeFilter === category.id ? "active" : "text-muted-foreground"
               }`}
+              data-testid={`filter-${category.id}`}
             >
               {category.label}
             </button>
           ))}
         </div>
         
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="project-card group cursor-pointer"
+              className="premium-card overflow-hidden group cursor-pointer"
+              data-testid={`card-project-${project.id}`}
             >
-              <div className="glass-morphism rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-                <div className="aspect-video relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="aspect-[4/3] img-hover-zoom">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-lg font-semibold">{project.title}</h3>
+                  <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, index) => (
-                      <Badge key={index} variant="secondary" className="text-xs">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, index) => (
+                    <span key={index} className="tag-subtle">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
