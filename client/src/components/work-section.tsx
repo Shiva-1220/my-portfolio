@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
+import getFitImage from "@assets/Screenshot_2025-12-15_152508_1765792591955.png";
 
 const projects = [
   {
     id: 1,
     title: "GetFit - Fitness App",
     description: "Complete fitness app with onboarding, personalized workouts, and progress tracking. Features dark theme with lime accent for modern feel.",
-    image: "/attached_assets/Screenshot_2025-12-15_152508_1765792591955.png",
+    image: getFitImage,
     category: "mobile",
     tags: ["Mobile Design", "UI/UX", "Figma"]
   },
