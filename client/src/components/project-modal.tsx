@@ -140,13 +140,13 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           {project.screens && project.screens.length > 0 && (
             <div className="mt-8">
               <h3 className="text-lg font-semibold mb-4">More Screens</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex justify-center gap-6 flex-wrap">
                 {project.screens.map((screen, index) => (
-                  <div key={index} className="rounded-xl overflow-hidden border border-border">
+                  <div key={index} className="flex-shrink-0">
                     <img
                       src={screen}
                       alt={`${project.title} screen ${index + 1}`}
-                      className="w-full h-auto"
+                      className="h-[400px] w-auto object-contain"
                     />
                   </div>
                 ))}
