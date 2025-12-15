@@ -24,10 +24,10 @@ function App() {
           <Toaster />
           <Router base="/my-portfolio">
   <Switch>
-    <Route path="/" component={Home} />
-    <Route component={NotFound} />
+    <Route path="/*" component={Home} />
   </Switch>
 </Router>
+
  
         </TooltipProvider>
       </ThemeProvider>
