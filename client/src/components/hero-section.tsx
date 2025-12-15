@@ -54,15 +54,20 @@ export function HeroSection() {
             View My Work
             <ArrowDown className="ml-2 h-4 w-4" />
           </Button>
-          <Button
-            variant="outline"
-            onClick={downloadResume}
-            className="px-6 py-2.5 border-border hover:bg-muted rounded-xl btn-premium"
-            data-testid="button-download-resume"
-          >
-            <Download className="mr-2 h-4 w-4" />
-            Resume
-          </Button>
+          <Button variant="outline" asChild>
+  <a
+    href="/my-portfolio/resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-2.5 border-border hover:bg-muted rounded-xl btn-premium"
+    data-testid="button-download-resume"
+  >
+    <Download className="mr-2 h-4 w-4" />
+    Resume
+  </a>
+</Button>
+
+
         </div>
         
         <div className="flex justify-center space-x-5">
