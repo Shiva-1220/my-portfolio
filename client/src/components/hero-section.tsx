@@ -10,14 +10,7 @@ export function HeroSection() {
     }
   };
 
-  const downloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/attached_assets/RESUME_SHIVANSHCHAURASIYA_1754163574605.pdf';
-    link.download = 'Shivansh_Chaurasiya_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 section-padding">
@@ -54,18 +47,21 @@ export function HeroSection() {
             View My Work
             <ArrowDown className="ml-2 h-4 w-4" />
           </Button>
+          
+          
+          
           <Button variant="outline" asChild>
-  <a
-    href="/my-portfolio/resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-6 py-2.5 border-border hover:bg-muted rounded-xl btn-premium"
-    data-testid="button-download-resume"
-  >
-    <Download className="mr-2 h-4 w-4" />
-    Resume
-  </a>
-</Button>
+            <a
+            href="/my-portfolio/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-2.5 border-border hover:bg-muted rounded-xl btn-premium"
+    
+           >
+           <Download className="mr-2 h-4 w-4" />
+           Resume
+            </a>
+          </Button>
 
 
         </div>
