@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Download, ArrowDown } from "lucide-react";
+import profilePhoto from "@assets/PASSPORT PIC_1754163000849.jpeg";
 
 export function HeroSection() {
   const scrollToWork = () => {
@@ -24,7 +25,7 @@ export function HeroSection() {
         <div className="mb-10">
           <div className="w-28 h-28 mx-auto rounded-full overflow-hidden border-2 border-border shadow-lg animate-gentle-float">
             <img
-              src="/attached_assets/PASSPORT PIC_1754163000849.jpeg"
+              src={profilePhoto}
               alt="Shivansh Chaurasiya - UI/UX Designer"
               className="w-full h-full object-cover"
             />
