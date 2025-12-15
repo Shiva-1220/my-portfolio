@@ -4,19 +4,19 @@ import { ExternalLink } from "lucide-react";
 const projects = [
   {
     id: 1,
+    title: "GetFit - Fitness App",
+    description: "Complete fitness app with onboarding, personalized workouts, and progress tracking. Features dark theme with lime accent for modern feel.",
+    image: "/attached_assets/Screenshot_2025-12-15_152508_1765792591955.png",
+    category: "mobile",
+    tags: ["Mobile Design", "UI/UX", "Figma"]
+  },
+  {
+    id: 2,
     title: "E-commerce Platform",
     description: "Modern shopping experience with intuitive navigation and seamless checkout process",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     category: "web",
     tags: ["UI Design", "User Research"]
-  },
-  {
-    id: 2,
-    title: "Fitness Tracking App",
-    description: "Comprehensive fitness solution with workout tracking and progress analytics",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    category: "mobile",
-    tags: ["Mobile Design", "Prototyping"]
   },
   {
     id: 3,
