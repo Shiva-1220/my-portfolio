@@ -1,0 +1,619 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - UI/UX Designer Portfolio</title>
+    <meta name="description" content="Portfolio of Alex Chen, UI/UX Designer specializing in modern web design and user experience">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'glass-white': 'rgba(255, 255, 255, 0.1)',
+                        'glass-dark': 'rgba(0, 0, 0, 0.1)',
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass-morphism {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neumorphic {
+            box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.8);
+        }
+        .dark .neumorphic {
+            box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="font-inter bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-all duration-300">
+    
+    <!-- @COMPONENT: NavigationHeader -->
+    <nav class="fixed top-0 w-full z-50 glass-morphism">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-cyan-500 bg-clip-text text-transparent">AC</span>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-indigo-600 transition-colors duration-200">Home</a>
+                        <a href="#work" class="hover:text-indigo-600 transition-colors duration-200">Work</a>
+                        <a href="#about" class="hover:text-indigo-600 transition-colors duration-200">About</a>
+                        <a href="#contact" class="hover:text-indigo-600 transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Dark mode toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg neumorphic hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-200">
+                        <i class="fas fa-moon text-lg dark:hidden"></i>
+                        <i class="fas fa-sun text-lg hidden dark:block"></i>
+                    </button>
+                    
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden p-2 rounded-lg neumorphic">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: NavigationHeader -->
+
+    <!-- @COMPONENT: HeroSection -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="animate-fade-in">
+                <!-- A modern workspace with design tools, computer setup, and creative materials arranged aesthetically -->
+                <div class="mb-8 relative">
+                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden glass-morphism p-1 animate-float">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300" 
+                             alt="Alex Chen - UI/UX Designer" class="w-full h-full object-cover rounded-full" data-mock="true" />
+                    </div>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">
+                        Alex Chen
+                    </span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-4">UI/UX Designer</p>
+                
+                <p class="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed">
+                    Creating beautiful, functional digital experiences that bridge the gap between user needs and business goals through thoughtful design and intuitive interfaces.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button class="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                        View My Work
+                    </button>
+                    <button class="px-8 py-3 glass-morphism rounded-lg hover:bg-white/20 transform hover:scale-105 transition-all duration-200">
+                        <i class="fas fa-download mr-2"></i>Download Resume
+                    </button>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-6 mt-8">
+                    <a href="#" class="text-slate-400 hover:text-indigo-600 transition-colors duration-200">
+                        <i class="fab fa-dribbble text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-indigo-600 transition-colors duration-200">
+                        <i class="fab fa-behance text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-indigo-600 transition-colors duration-200">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-indigo-600 transition-colors duration-200">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- @COMPONENT: WorkSection -->
+    <section id="work" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Selected Work</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                    A collection of projects showcasing my approach to solving complex design challenges
+                </p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors duration-200 filter-btn active" data-filter="all">
+                    All Projects
+                </button>
+                <button class="px-6 py-2 glass-morphism rounded-full hover:bg-white/20 transition-all duration-200 filter-btn" data-filter="web">
+                    Web Design
+                </button>
+                <button class="px-6 py-2 glass-morphism rounded-full hover:bg-white/20 transition-all duration-200 filter-btn" data-filter="mobile">
+                    Mobile Apps
+                </button>
+                <button class="px-6 py-2 glass-morphism rounded-full hover:bg-white/20 transition-all duration-200 filter-btn" data-filter="branding">
+                    Branding
+                </button>
+            </div>
+            
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- @MAP: projects.map(project => ( -->
+                
+                <!-- Project 1 -->
+                <div class="project-card group cursor-pointer" data-category="web">
+                    <div class="glass-morphism rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <!-- Modern e-commerce website interface with clean layout and product displays -->
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                                 alt="E-commerce Platform Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2" data-bind="project.title">E-commerce Platform</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4" data-bind="project.description">Modern shopping experience with intuitive navigation and seamless checkout process</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-xs bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded">UI Design</span>
+                                <span class="px-2 py-1 text-xs bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 rounded">User Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card group cursor-pointer" data-category="mobile">
+                    <div class="glass-morphism rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <!-- Mobile app interface design showing clean screens and user flows -->
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                                 alt="Fitness App Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2" data-bind="project.title">Fitness Tracking App</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4" data-bind="project.description">Comprehensive fitness solution with workout tracking and progress analytics</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-xs bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded">Mobile Design</span>
+                                <span class="px-2 py-1 text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded">Prototyping</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card group cursor-pointer" data-category="web">
+                    <div class="glass-morphism rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <!-- Dashboard interface with charts, graphs and data visualization elements -->
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                                 alt="Analytics Dashboard Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2" data-bind="project.title">Analytics Dashboard</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4" data-bind="project.description">Data visualization platform for business intelligence and reporting</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-xs bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded">Data Viz</span>
+                                <span class="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded">UX Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card group cursor-pointer" data-category="branding">
+                    <div class="glass-morphism rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <!-- Brand identity design with logos, color schemes and typography -->
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="https://pixabay.com/get/g7bbd924eef1fe1abb8b87f746b570d4ffc990b3d904bb7058a1173c37374ca367b7e92372ad845a08825516e378ab4e791e0f3d7de2079c211fef69025c42812_1280.jpg" 
+                                 alt="Brand Identity Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2" data-bind="project.title">Tech Startup Branding</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4" data-bind="project.description">Complete brand identity for innovative technology company</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-xs bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 rounded">Brand Identity</span>
+                                <span class="px-2 py-1 text-xs bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 rounded">Logo Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card group cursor-pointer" data-category="mobile">
+                    <div class="glass-morphism rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <!-- Mobile banking app interface with clean financial UI elements -->
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                                 alt="Banking App Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2" data-bind="project.title">Digital Banking App</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4" data-bind="project.description">Secure and intuitive mobile banking experience with modern interface</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-xs bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded">FinTech</span>
+                                <span class="px-2 py-1 text-xs bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded">Security UX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card group cursor-pointer" data-category="web">
+                    <div class="glass-morphism rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                        <!-- Learning platform interface with course layouts and educational elements -->
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                                 alt="Learning Platform Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2" data-bind="project.title">Online Learning Platform</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4" data-bind="project.description">Educational platform with interactive courses and progress tracking</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-xs bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded">EdTech</span>
+                                <span class="px-2 py-1 text-xs bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 rounded">Interaction Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: WorkSection -->
+
+    <!-- @COMPONENT: AboutSection -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-100 dark:bg-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-slide-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                        I'm a passionate UI/UX designer with over 5 years of experience creating digital experiences that users love. I believe great design is invisible – it just works.
+                    </p>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+                        My approach combines user research, data-driven insights, and creative problem-solving to deliver solutions that not only look beautiful but also drive business results.
+                    </p>
+                    
+                    <!-- Skills -->
+                    <div class="space-y-6">
+                        <h3 class="text-xl font-semibold mb-4">Skills & Expertise</h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">UI/UX Design</span>
+                                    <span class="text-slate-500">95%</span>
+                                </div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Prototyping</span>
+                                    <span class="text-slate-500">90%</span>
+                                </div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-cyan-500 to-emerald-500 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">User Research</span>
+                                    <span class="text-slate-500">85%</span>
+                                </div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Frontend Development</span>
+                                    <span class="text-slate-500">75%</span>
+                                </div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-green-500 to-teal-500 h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <!-- Designer at work with multiple screens, design tools and creative workspace -->
+                    <div class="relative glass-morphism rounded-2xl p-8 animate-float">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=800" 
+                             alt="Designer workspace with creative tools" class="w-full h-96 object-cover rounded-xl" />
+                        
+                        <!-- Tools & Technologies -->
+                        <div class="absolute -bottom-6 -right-6 glass-morphism rounded-xl p-4">
+                            <h4 class="font-semibold mb-3">Tools I Use</h4>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="text-center">
+                                    <i class="fab fa-figma text-2xl text-orange-500 mb-1"></i>
+                                    <p class="text-xs">Figma</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fab fa-sketch text-2xl text-yellow-500 mb-1"></i>
+                                    <p class="text-xs">Sketch</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-palette text-2xl text-purple-500 mb-1"></i>
+                                    <p class="text-xs">Adobe</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fab fa-react text-2xl text-blue-500 mb-1"></i>
+                                    <p class="text-xs">React</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-code text-2xl text-green-500 mb-1"></i>
+                                    <p class="text-xs">HTML/CSS</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fab fa-js-square text-2xl text-yellow-400 mb-1"></i>
+                                    <p class="text-xs">JavaScript</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AboutSection -->
+
+    <!-- @COMPONENT: ContactSection -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Work Together</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                    Have a project in mind? I'd love to hear about it and discuss how we can bring your vision to life.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6">Get In Touch</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 glass-morphism rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Email</p>
+                                    <p class="text-slate-600 dark:text-slate-400" data-mock="true">alex@example.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 glass-morphism rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Phone</p>
+                                    <p class="text-slate-600 dark:text-slate-400" data-mock="true">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 glass-morphism rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Location</p>
+                                    <p class="text-slate-600 dark:text-slate-400" data-mock="true">San Francisco, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div>
+                        <h4 class="font-semibold mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 glass-morphism rounded-lg flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all duration-200">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 glass-morphism rounded-lg flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all duration-200">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 glass-morphism rounded-lg flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all duration-200">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 glass-morphism rounded-lg flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all duration-200">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="glass-morphism rounded-2xl p-8">
+                    <!-- @STATE: formData:object = {name:'', email:'', message:'', isSubmitting:false} -->
+                    <form class="space-y-6" data-implementation="Should include validation and submission handling">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" 
+                                   class="w-full px-4 py-3 glass-morphism rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all duration-200" 
+                                   placeholder="Your name" data-mock="true" />
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" 
+                                   class="w-full px-4 py-3 glass-morphism rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all duration-200" 
+                                   placeholder="your@email.com" data-mock="true" />
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" 
+                                      class="w-full px-4 py-3 glass-morphism rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all duration-200 resize-none" 
+                                      placeholder="Tell me about your project..." data-mock="true"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:from-indigo-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
+                                data-event="click:handleSubmit">
+                            <span class="flex items-center justify-center">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 bg-slate-100 dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-slate-600 dark:text-slate-400">
+                © 2024 Alex Chen. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            
+            // Check for saved theme preference or default to light mode
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            html.classList.toggle('dark', savedTheme === 'dark');
+            
+            themeToggle.addEventListener('click', function() {
+                const isDark = html.classList.toggle('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+            
+            // Project filtering functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-indigo-600', 'text-white');
+                        btn.classList.add('glass-morphism');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'bg-indigo-600', 'text-white');
+                    this.classList.remove('glass-morphism');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            card.classList.add('animate-fade-in');
+                        } else {
+                            card.style.display = 'none';
+                            card.classList.remove('animate-fade-in');
+                        }
+                    });
+                });
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Form submission handling
+            const contactForm = document.querySelector('form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // TODO: Implement form validation and submission
+                alert('Form submission functionality would be implemented here');
+            });
+            
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animations
+            document.querySelectorAll('.project-card, .glass-morphism').forEach(el => {
+                observer.observe(el);
+            });
+        })();
+    </script>
+</body>
+</html>
